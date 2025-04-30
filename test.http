@@ -1,0 +1,37 @@
+### Variables
+@baseUrl = http://localhost:3000
+@contentType = application/json
+
+### Create a new user
+# @name createUser
+POST {{baseUrl}}/users
+Content-Type: {{contentType}}
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "age": 30
+}
+
+### Set the createdUserId variable from the response
+@createdUserId = {{createUser.response.body.id}}
+
+### Get all users
+GET {{baseUrl}}/users
+Accept: {{contentType}}
+
+### Get a specific user by ID
+GET {{baseUrl}}/users/{{createdUserId}}
+Accept: {{contentType}}
+
+### Update a user
+PATCH {{baseUrl}}/users/{{createdUserId}}
+Content-Type: {{contentType}}
+
+{
+  "name": "John Updated",
+  "age": 31
+}
+
+### Delete a user
+DELETE {{baseUrl}}/users/{{createdUserId}}

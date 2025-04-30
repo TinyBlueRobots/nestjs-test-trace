@@ -1,0 +1,35 @@
+{
+  "name": "nestjs-basic-app",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "bun test",
+    "start": "bunx nest start"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.1",
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/mapped-types": "^2.1.0",
+    "@nestjs/mongoose": "^11.0.3",
+    "@nestjs/platform-express": "^11.1.0",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/core": "^2.0.0",
+    "@opentelemetry/exporter-metrics-otlp-grpc": "^0.200.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "^0.200.0",
+    "@opentelemetry/sdk-trace-node": "^2.0.0",
+    "@types/express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.7",
+    "@nestjs/testing": "^11.1.0",
+    "@types/bun": "^1.2.11",
+    "@types/supertest": "^6.0.3",
+    "bun": "^1.2.11",
+    "mongodb-memory-server": "^10.1.4",
+    "redis-memory-server": "^0.12.1",
+    "supertest": "^7.1.0"
+  }
+}
